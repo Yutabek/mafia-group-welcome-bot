@@ -1,6 +1,7 @@
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 
+
 router = Router()
 
 
@@ -13,8 +14,8 @@ RULES_TEXT = """
 
 3. 🔗 Boshqa guruh yoki kanallarga odamlarni jalb qilish taqiqlanadi.
 
-4. 🎭 O‘yin davomida boshqa o‘yinchilarning shaxsiy ma’lumotlarini
-   tarqatmang.
+4. 🎭 O‘yin davomida boshqa o‘yinchilarning shaxsiy ma'lumotlarini
+tarqatmang.
 
 5. ⚠️ Adminlar ko‘rsatmalariga amal qiling.
 
@@ -29,7 +30,7 @@ olib kelishi mumkin.
 async def rules_handler(callback: CallbackQuery):
     await callback.message.edit_text(
         RULES_TEXT,
-        parse_mode="HTML"
+        parse_mode="HTML",
     )
 
     await callback.answer()
